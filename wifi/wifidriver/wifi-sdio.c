@@ -925,8 +925,9 @@ static int wlan_get_hw_spec(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
 
+    return ret;
 }
 
 static int wlan_get_mac_addr_sta(void)
@@ -955,8 +956,9 @@ static int wlan_get_mac_addr_sta(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
 
+    return ret;
 }
 
 #if UAP_SUPPORT
@@ -1021,8 +1023,9 @@ static int wlan_get_fw_ver_ext(int version_str_sel)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
 
+    return ret;
 }
 
 void wifi_prepare_get_value1(HostCmd_DS_COMMAND *cmd, int seq_number);

@@ -1,0 +1,3 @@
+../wifi/wlcmgr/wlan_txpwrlimit_cfg.c:193:5:wlan_set_rg_power_cfg	24	static
+../wifi/wlcmgr/wlan_txpwrlimit_cfg.c:215:5:wlan_set_wwsm_txpwrlimit	16	static
+../wifi/wlcmgr/wlan_txpwrlimit_cfg.c:385:13:wlan_get_wlan_region_code	4	static

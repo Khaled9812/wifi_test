@@ -1,0 +1,2 @@
+../wifi/wifidriver/wifi-debug.c:72:13:get_status_str	16	static
+../wifi/wifidriver/wifi-debug.c:80:6:wifi_show_assoc_fail_reason	16	static

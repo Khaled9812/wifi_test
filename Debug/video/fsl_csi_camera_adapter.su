@@ -1,0 +1,8 @@
+../video/fsl_csi_camera_adapter.c:59:17:CSI_ADAPTER_Init	48	static
+../video/fsl_csi_camera_adapter.c:119:17:CSI_ADAPTER_Deinit	16	static
+../video/fsl_csi_camera_adapter.c:126:17:CSI_ADAPTER_Start	16	static
+../video/fsl_csi_camera_adapter.c:132:17:CSI_ADAPTER_Stop	16	static
+../video/fsl_csi_camera_adapter.c:138:17:CSI_ADAPTER_SubmitEmptyBuffer	16	static
+../video/fsl_csi_camera_adapter.c:144:17:CSI_ADAPTER_GetFullBuffer	16	static
+../video/fsl_csi_camera_adapter.c:150:13:CSI_ADAPTER_Callback	32	static
+../video/fsl_csi_camera_adapter.c:169:17:CSI_ADAPTER_InitExt	24	static

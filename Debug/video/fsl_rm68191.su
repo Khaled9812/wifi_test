@@ -1,0 +1,4 @@
+../video/fsl_rm68191.c:166:10:RM68191_Init	32	static
+../video/fsl_rm68191.c:223:10:RM68191_Deinit	24	static
+../video/fsl_rm68191.c:236:10:RM68191_Start	24	static
+../video/fsl_rm68191.c:244:10:RM68191_Stop	24	static

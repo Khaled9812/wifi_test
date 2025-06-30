@@ -1,0 +1,14 @@
+D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\incl\port\net/wm_net.h:514:20:net_is_ip_or_ipv6	16	static
+../wifi/port/net/wifi_netif.c:222:13:register_interface	16	static
+../wifi/port/net/wifi_netif.c:264:13:deliver_packet_above	24	static
+../wifi/port/net/wifi_netif.c:418:21:gen_pbuf_from_data	24	static
+../wifi/port/net/wifi_netif.c:446:13:process_data_packet	72	static
+../wifi/port/net/wifi_netif.c:779:6:handle_data_packet	16	static
+../wifi/port/net/wifi_netif.c:816:6:handle_amsdu_data_packet	24	static
+../wifi/port/net/wifi_netif.c:832:6:handle_deliver_packet_above	32	static
+../wifi/port/net/wifi_netif.c:840:6:wrapper_net_is_ip_or_ipv6	16	static
+../wifi/port/net/wifi_netif.c:853:13:low_level_init	16	static
+../wifi/port/net/wifi_netif.c:910:14:low_level_output	48	static
+../wifi/port/net/wifi_netif.c:1165:14:igmp_mac_filter	56	static
+../wifi/port/net/wifi_netif.c:1420:7:lwip_netif_init	24	static
+../wifi/port/net/wifi_netif.c:1471:7:lwip_netif_uap_init	24	static

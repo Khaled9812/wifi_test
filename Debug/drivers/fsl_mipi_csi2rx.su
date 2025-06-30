@@ -1,0 +1,6 @@
+../drivers/fsl_clock.h:2094:20:CLOCK_ControlGate	16	static
+../drivers/fsl_clock.h:2113:20:CLOCK_EnableClock	16	static
+../drivers/fsl_clock.h:2123:20:CLOCK_DisableClock	16	static
+../drivers/fsl_mipi_csi2rx.c:197:10:CSI2RX_GetInstance	24	static
+../drivers/fsl_mipi_csi2rx.c:220:6:CSI2RX_Init	16	static
+../drivers/fsl_mipi_csi2rx.c:250:6:CSI2RX_Deinit	16	static

@@ -1,0 +1,5 @@
+D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\CMSIS/core_cm7.h:2143:22:__NVIC_SetPriority	16	static
+D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\drivers/fsl_gpio.h:112:20:GPIO_PortSet	16	static
+D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\drivers/fsl_gpio.h:136:20:GPIO_PortClear	16	static
+../wifi/template/wifi_bt_config.c:58:6:BOARD_WIFI_BT_Enable	16	static
+../wifi/template/wifi_bt_config.c:93:6:BOARD_WIFI_BT_Config	24	static

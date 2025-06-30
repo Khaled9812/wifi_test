@@ -16,3 +16,10 @@ Prepare the Demo
 3.  Download the program to the target board.
 4.  Either press the reset button on your board or launch the debugger in your IDE to begin running the demo.
 
+Troubleshooting
+---------------
+If Wi-Fi initialization fails with a command timeout, ensure the firmware image
+is linked correctly. The variable `wlan_fw_bin_len` should be non-zero. A zero
+value usually means the board configuration macro does not match the included
+firmware.
+

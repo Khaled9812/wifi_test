@@ -239,17 +239,16 @@ static int wifi_sdio_put_command_resp_sem(void)
     return OSA_SemaphorePost((osa_semaphore_handle_t)sdio_command_resp_sem);
 }
 
-static void wifi_sdio_wait_for_cmdresp()
+static int wifi_sdio_wait_for_cmdresp(void)
 {
     /* Wait max 20 sec for the command response */
     int ret = wifi_sdio_get_command_resp_sem(SDIO_COMMAND_RESPONSE_WAIT_MS);
     if (ret != WM_SUCCESS)
     {
-
-
-        /* assert as command flow cannot work anymore */
-        assert(0);
+        wifi_e("Timeout waiting for cmd 0x%x", last_cmd_sent);
+        return -WM_FAIL;
     }
+    return WM_SUCCESS;
 }
 
 uint32_t wifi_get_device_value1(void)
@@ -802,7 +801,7 @@ static int wlan_get_next_seq_num(void)
 }
 
 void wifi_prepare_set_cal_data_cmd(HostCmd_DS_COMMAND *cmd, int seq_number);
-static void _wlan_set_cal_data(void)
+static int _wlan_set_cal_data(void)
 {
     t_u32 tx_blocks = 2, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -830,12 +829,13 @@ static void _wlan_set_cal_data(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+    return ret;
 }
 
 void wifi_prepare_reconfigure_tx_buf_cmd(HostCmd_DS_COMMAND *cmd, t_u16 seq_number);
 
-static void wlan_reconfigure_tx_buffers(void)
+static int wlan_reconfigure_tx_buffers(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -862,7 +862,8 @@ static void wlan_reconfigure_tx_buffers(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+    return ret;
 }
 
 void wifi_prepare_get_mac_addr_cmd(HostCmd_DS_COMMAND *cmd, int seq_number);
@@ -872,7 +873,7 @@ void wifi_prepare_get_channel_region_cfg_cmd(HostCmd_DS_COMMAND *cmd, t_u16 seq_
 void wifi_prepare_get_hw_spec_cmd(HostCmd_DS_COMMAND *cmd, t_u16 seq_number);
 
 #ifdef OTP_CHANINFO
-static void wlan_get_channel_region_cfg(void)
+static int wlan_get_channel_region_cfg(void)
 {
     uint32_t tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -896,12 +897,12 @@ static void wlan_get_channel_region_cfg(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
-
+    int ret = wifi_sdio_wait_for_cmdresp();
+    return ret;
 }
 #endif
 
-static void wlan_get_hw_spec(void)
+static int wlan_get_hw_spec(void)
 {
     uint32_t tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -928,7 +929,7 @@ static void wlan_get_hw_spec(void)
 
 }
 
-static void wlan_get_mac_addr_sta(void)
+static int wlan_get_mac_addr_sta(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -959,7 +960,7 @@ static void wlan_get_mac_addr_sta(void)
 }
 
 #if UAP_SUPPORT
-static void wlan_get_mac_addr_uap(void)
+static int wlan_get_mac_addr_uap(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -987,13 +988,14 @@ static void wlan_get_mac_addr_uap(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+    return ret;
 
 }
 #endif
 
 void wifi_prepare_get_fw_ver_ext_cmd(HostCmd_DS_COMMAND *cmd, int seq_number, int version_str_sel);
-static void wlan_get_fw_ver_ext(int version_str_sel)
+static int wlan_get_fw_ver_ext(int version_str_sel)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -1025,7 +1027,7 @@ static void wlan_get_fw_ver_ext(int version_str_sel)
 
 void wifi_prepare_get_value1(HostCmd_DS_COMMAND *cmd, int seq_number);
 
-static void wlan_get_value_1(void)
+static int wlan_get_value_1(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -1050,12 +1052,13 @@ static void wlan_get_value_1(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
 
+    return ret;
 }
 
 void wifi_prepare_set_mac_addr_cmd(HostCmd_DS_COMMAND *cmd, int seq_number);
-static void _wlan_set_mac_addr(void)
+static int _wlan_set_mac_addr(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -1081,11 +1084,12 @@ static void _wlan_set_mac_addr(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+    return ret;
 }
 
 #if CONFIG_11N
-static void wlan_set_11n_cfg(void)
+static int wlan_set_11n_cfg(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -1110,12 +1114,13 @@ static void wlan_set_11n_cfg(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+    return ret;
 }
 
 #if CONFIG_ENABLE_AMSDU_RX
 void wifi_prepare_enable_amsdu_cmd(HostCmd_DS_COMMAND *cmd, int seq_number);
-static void wlan_enable_amsdu(void)
+static int wlan_enable_amsdu(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -1140,7 +1145,9 @@ static void wlan_enable_amsdu(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+
+    return ret;
 
 }
 #endif /* CONFIG_ENABLE_AMSDU_RX */
@@ -1168,7 +1175,7 @@ static void wlan_cmd_shutdown(void)
 }
 
 void wlan_prepare_mac_control_cmd(HostCmd_DS_COMMAND *cmd, t_u16 seq_number);
-static void wlan_set_mac_ctrl(void)
+static int wlan_set_mac_ctrl(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -1194,11 +1201,13 @@ static void wlan_set_mac_ctrl(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+
+    return ret;
 
 }
 
-static void wlan_cmd_init(void)
+static int wlan_cmd_init(void)
 {
     t_u32 tx_blocks = 1, buflen = MLAN_SDIO_BLOCK_SIZE;
     uint32_t resp;
@@ -1226,7 +1235,8 @@ static void wlan_cmd_init(void)
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
+    return ret;
 }
 
 #ifdef WLAN_LOW_POWER_ENABLE
@@ -1253,15 +1263,15 @@ static int wlan_set_low_power_mode()
 
     wifi_sdio_unlock();
 
-    wifi_sdio_wait_for_cmdresp();
+    int ret = wifi_sdio_wait_for_cmdresp();
 
-    return true;
+    return ret;
 }
 #endif
 
 
 /* Setup the firmware with commands */
-static void wlan_fw_init_cfg(void)
+static int wlan_fw_init_cfg(void)
 {
 #if CONFIG_FW_VDLL
     mlan_private *pmpriv = (mlan_private *)mlan_adap->priv[0];
@@ -1270,7 +1280,9 @@ static void wlan_fw_init_cfg(void)
 
     wifi_io_d("FWCMD : INIT (0xa9)");
 
-    wlan_cmd_init();
+    int ret = wlan_cmd_init();
+    if (ret != WM_SUCCESS)
+        return ret;
 
 #ifdef WLAN_LOW_POWER_ENABLE
     if (low_power_mode)
@@ -1283,7 +1295,9 @@ static void wlan_fw_init_cfg(void)
 #endif
         wifi_io_d("CMD : LOW_POWER_MODE (0x128)");
 
-        wlan_set_low_power_mode();
+        ret = wlan_set_low_power_mode();
+        if (ret != WM_SUCCESS)
+            return ret;
     }
 #endif
 
@@ -1296,7 +1310,9 @@ static void wlan_fw_init_cfg(void)
             OSA_TimeDelay(50);
         }
 #endif
-        _wlan_set_mac_addr();
+        ret = _wlan_set_mac_addr();
+        if (ret != WM_SUCCESS)
+            return ret;
     }
 
 #ifdef OTP_CHANINFO
@@ -1309,7 +1325,9 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_get_channel_region_cfg();
+    ret = wlan_get_channel_region_cfg();
+    if (ret != WM_SUCCESS)
+        return ret;
 #endif
 
     wifi_io_d("CMD : GET_HW_SPEC (0x03)");
@@ -1321,7 +1339,9 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_get_hw_spec();
+    ret = wlan_get_hw_spec();
+    if (ret != WM_SUCCESS)
+        return ret;
 
     if (cal_data_valid
 #ifdef IW610
@@ -1337,7 +1357,9 @@ static void wlan_fw_init_cfg(void)
 #endif
         wifi_io_d("CMD : SET_CAL_DATA (0x8f)");
 
-        _wlan_set_cal_data();
+        ret = _wlan_set_cal_data();
+        if (ret != WM_SUCCESS)
+            return ret;
     }
 
     /* When cal data set command is sent, fimrware looses alignment of SDIO Tx buffers.
@@ -1352,7 +1374,9 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_reconfigure_tx_buffers();
+    ret = wlan_reconfigure_tx_buffers();
+    if (ret != WM_SUCCESS)
+        return ret;
 
 #if CONFIG_FW_VDLL
     while (pmadapter->vdll_in_progress == MTRUE)
@@ -1361,7 +1385,9 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_get_value_1();
+    ret = wlan_get_value_1();
+    if (ret != WM_SUCCESS)
+        return ret;
 
     if (wm_wifi.wifi_init_done == 0U)
     {
@@ -1375,7 +1401,9 @@ static void wlan_fw_init_cfg(void)
         }
 #endif
 
-        wlan_get_fw_ver_ext(0);
+        ret = wlan_get_fw_ver_ext(0);
+        if (ret != WM_SUCCESS)
+            return ret;
     }
 
     wifi_io_d("CMD : GET_MAC_ADDR (0x4d)");
@@ -1387,7 +1415,9 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_get_mac_addr_sta();
+    ret = wlan_get_mac_addr_sta();
+    if (ret != WM_SUCCESS)
+        return ret;
 
     wifi_io_d("CMD : GET_MAC_ADDR (0x4d)");
 
@@ -1399,7 +1429,9 @@ static void wlan_fw_init_cfg(void)
 #endif
 
 #if UAP_SUPPORT
-    wlan_get_mac_addr_uap();
+    ret = wlan_get_mac_addr_uap();
+    if (ret != WM_SUCCESS)
+        return ret;
 #endif
 
     if (wm_wifi.wifi_init_done == 0U)
@@ -1414,7 +1446,9 @@ static void wlan_fw_init_cfg(void)
         }
 #endif
 
-        wlan_get_fw_ver_ext(3);
+        ret = wlan_get_fw_ver_ext(3);
+        if (ret != WM_SUCCESS)
+            return ret;
 
     }
 
@@ -1427,7 +1461,9 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_set_mac_ctrl();
+    ret = wlan_set_mac_ctrl();
+    if (ret != WM_SUCCESS)
+        return ret;
 
     if (wm_wifi.wifi_init_done == 0U)
     {
@@ -1440,7 +1476,9 @@ static void wlan_fw_init_cfg(void)
         }
 #endif
 
-        wlan_get_fw_ver_ext(4);
+        ret = wlan_get_fw_ver_ext(4);
+        if (ret != WM_SUCCESS)
+            return ret;
     }
 
 
@@ -1454,7 +1492,9 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_set_11n_cfg();
+    ret = wlan_set_11n_cfg();
+    if (ret != WM_SUCCESS)
+        return ret;
 
 #if CONFIG_ENABLE_AMSDU_RX
     wifi_io_d("CMD : AMSDU_AGGR_CTRL (0xdf)");
@@ -1466,12 +1506,14 @@ static void wlan_fw_init_cfg(void)
     }
 #endif
 
-    wlan_enable_amsdu();
+    ret = wlan_enable_amsdu();
+    if (ret != WM_SUCCESS)
+        return ret;
 
 #endif /* CONFIG_ENABLE_AMSDU_RX */
 #endif /* CONFIG_11N */
 
-    return;
+    return WM_SUCCESS;
 }
 
 
@@ -2895,7 +2937,8 @@ mlan_status sd_wifi_post_init(enum wlan_type type)
     {
         case WLAN_TYPE_NORMAL:
             fw_init_cfg = 1;
-            wlan_fw_init_cfg();
+            if (wlan_fw_init_cfg() != WM_SUCCESS)
+                return MLAN_STATUS_FAILURE;
             fw_init_cfg = 0;
             break;
         case WLAN_TYPE_WIFI_CALIB:

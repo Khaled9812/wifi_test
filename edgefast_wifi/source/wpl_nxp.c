@@ -220,50 +220,32 @@ int wlan_event_callback(enum wlan_event_reason reason, void *data)
 
 wpl_ret_t WPL_Init(void)
 {
-    PRINTF(
-        "\r\n"
-        "Inside wpl 1");
     wpl_ret_t status = WPLRET_SUCCESS;
-    PRINTF(
-        "\r\n"
-        "Inside wpl 2");
 
     if (s_wplState != WPL_NOT_INITIALIZED)
-    {    PRINTF(
-            "\r\n"
-            "Inside wpl 3");
+    {
         status = WPLRET_FAIL;
     }
 
     if (status == WPLRET_SUCCESS)
-    {    PRINTF(
-            "\r\n"
-            "Inside wpl 4");
+    {
         if (s_wplSyncEvent == NULL)
-        {    PRINTF(
-                "\r\n"
-                "Inside wpl 5");
+        {
             s_wplSyncEvent = xEventGroupCreate();
         }
 
         if (s_wplSyncEvent == NULL)
-        {    PRINTF(
-                "\r\n"
-                "Inside wpl 6");
+        {
             status = WPLRET_FAIL;
         }
     }
 
 #ifndef WPL_NO_WLAN_INIT
     if (status == WPLRET_SUCCESS)
-    {    PRINTF(
-            "\r\n"
-            "Inside wpl 7");
+    {
         const int ret = wlan_init(wlan_fw_bin, wlan_fw_bin_len);
         if (ret != WM_SUCCESS)
-        {    PRINTF(
-                "\r\n"
-                "Inside wpl 8");
+        {
             status = WPLRET_FAIL;
         }
     }
@@ -272,9 +254,6 @@ wpl_ret_t WPL_Init(void)
     if (status == WPLRET_SUCCESS)
     {
         s_wplState = WPL_INITIALIZED;
-        PRINTF(
-                       "\r\n"
-                       "Inside wpl 9");
     }
 
     return status;

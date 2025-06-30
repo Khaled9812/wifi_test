@@ -16,7 +16,7 @@
  */
 
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-!GlobalInfo
+!!GlobalInfo
 product: Clocks v11.0
 processor: MIMXRT1176xxxxx
 package_id: MIMXRT1176DVMAA
@@ -74,7 +74,7 @@ void UpdateSemcClock(void)
  ********************** Configuration BOARD_BootClockRUN ***********************
  ******************************************************************************/
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-!Configuration
+!!Configuration
 name: BOARD_BootClockRUN
 called_from_default_init: true
 outputs:
@@ -887,7 +887,7 @@ void BOARD_BootClockRUN(void)
  ******************* Configuration BOARD_BootClockRUN_800M *********************
  ******************************************************************************/
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-!Configuration
+!!Configuration
 name: BOARD_BootClockRUN_800M
 outputs:
 - {id: ACMP_CLK_ROOT.outFreq, value: 24 MHz}

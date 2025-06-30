@@ -1,5 +1,6 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_main.h:3001:14:wlan_strlen	24	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_api.h:283:27:wifi_check_bss_entry_wpa2_entp_only	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\incl/wm_utils.h:274:20:dump_hex	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_main.h:3001:14:wlan_strlen	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_api.h:283:27:wifi_check_bss_entry_wpa2_entp_only	16	static
 ../wifi/wifidriver/mlan_scan.c:115:6:is_split_scan_complete	4	static
 ../wifi/wifidriver/mlan_scan.c:124:6:wlan_abort_split_scan	4	static
 ../wifi/wifidriver/mlan_scan.c:141:13:search_oui_in_ie	32	static
@@ -8,8 +9,8 @@ D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_a
 ../wifi/wifidriver/mlan_scan.c:280:14:radio_type_to_band	24	static
 ../wifi/wifidriver/mlan_scan.c:307:13:wlan_update_chan_statistics	56	static
 ../wifi/wifidriver/mlan_scan.c:355:13:wlan_is_band_compatible	24	static
-../wifi/wifidriver/mlan_scan.c:390:15:wlan_scan_create_channel_list	56	static
-../wifi/wifidriver/mlan_scan.c:665:20:wlan_scan_channel_list	112	static
+../wifi/wifidriver/mlan_scan.c:390:15:wlan_scan_create_channel_list	64	static
+../wifi/wifidriver/mlan_scan.c:665:20:wlan_scan_channel_list	128	static
 ../wifi/wifidriver/mlan_scan.c:995:20:wlan_scan_setup_scan_config	104	static
 ../wifi/wifidriver/mlan_scan.c:1447:6:wlan_active_scan_req_for_passive_chan	88	static
 ../wifi/wifidriver/mlan_scan.c:1602:20:wlan_interpret_bss_desc_with_ie	184	static
@@ -21,7 +22,7 @@ D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_a
 ../wifi/wifidriver/mlan_scan.c:2470:7:wlan_is_network_compatible	32	static
 ../wifi/wifidriver/mlan_scan.c:2731:13:wlan_scan_networks	88	static
 ../wifi/wifidriver/mlan_scan.c:2921:13:adjust_pointers_to_internal_buffers	16	static
-../wifi/wifidriver/mlan_scan.c:3025:13:wlan_ret_802_11_scan	184	static
+../wifi/wifidriver/mlan_scan.c:3025:13:wlan_ret_802_11_scan	192	static
 ../wifi/wifidriver/mlan_scan.c:3467:13:wlan_cmd_802_11_scan_ext	32	static
 ../wifi/wifidriver/mlan_scan.c:3499:13:wlan_ret_802_11_scan_ext	48	static
 ../wifi/wifidriver/mlan_scan.c:3600:20:wlan_update_ssid_in_beacon_buf	40	static

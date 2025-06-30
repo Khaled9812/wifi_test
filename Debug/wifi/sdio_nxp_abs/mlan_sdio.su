@@ -1,8 +1,8 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\drivers/fsl_usdhc.h:930:20:USDHC_EnableInterruptStatus	16	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\drivers/fsl_usdhc.h:941:20:USDHC_DisableInterruptStatus	16	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\drivers/fsl_usdhc.h:952:20:USDHC_EnableInterruptSignal	16	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\drivers/fsl_usdhc.h:963:20:USDHC_DisableInterruptSignal	16	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\sdmmc\host\usdhc/fsl_sdmmc_host.h:283:20:SDMMCHOST_EnableCardInt	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\drivers/fsl_usdhc.h:930:20:USDHC_EnableInterruptStatus	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\drivers/fsl_usdhc.h:941:20:USDHC_DisableInterruptStatus	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\drivers/fsl_usdhc.h:952:20:USDHC_EnableInterruptSignal	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\drivers/fsl_usdhc.h:963:20:USDHC_DisableInterruptSignal	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\sdmmc\host\usdhc/fsl_sdmmc_host.h:283:20:SDMMCHOST_EnableCardInt	16	static
 ../wifi/sdio_nxp_abs/mlan_sdio.c:105:5:sdio_drv_creg_read	32	static
 ../wifi/sdio_nxp_abs/mlan_sdio.c:127:5:sdio_drv_creg_write	40	static
 ../wifi/sdio_nxp_abs/mlan_sdio.c:151:5:sdio_drv_read	48	static

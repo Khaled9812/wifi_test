@@ -1,4 +1,4 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_api.h:62:20:panic	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_api.h:62:20:panic	16	static
 ../wifi/wifidriver/wifi.c:249:10:wifi_get_last_cmd_sent_ms	4	static
 ../wifi/wifidriver/wifi.c:254:10:wifi_get_value1	8	static
 ../wifi/wifidriver/wifi.c:260:6:wifi_wake_up_card	16	static
@@ -11,7 +11,11 @@ D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_a
 ../wifi/wifidriver/wifi.c:329:5:wifi_put_command_lock	16	static
 ../wifi/wifidriver/wifi.c:349:12:wifi_get_mcastf_lock	16	static
 ../wifi/wifidriver/wifi.c:363:12:wifi_put_mcastf_lock	16	static
-../wifi/wifidriver/wifi.c:1044:5:wifi_wait_for_vdllcmdresp	32	static
+../wifi/wifidriver/wifi.c:379:6:wifi_register_fw_dump_cb	24	static
+../wifi/wifidriver/wifi.c:766:13:wifi_cmd52_rdwr_firmware	40	static
+../wifi/wifidriver/wifi.c:822:6:wifi_dump_firmware_info	64	static
+../wifi/wifidriver/wifi.c:957:6:wifi_sdio_reg_dbg	368	static
+../wifi/wifidriver/wifi.c:1044:5:wifi_wait_for_vdllcmdresp	40	static
 ../wifi/wifidriver/wifi.c:1165:6:wifi_handle_preasleep_response	16	static
 ../wifi/wifidriver/wifi.c:1182:5:wifi_wait_for_cmdresp	64	static
 ../wifi/wifidriver/wifi.c:1410:5:wifi_event_completion	24	static

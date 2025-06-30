@@ -12,7 +12,7 @@
 ../wifi/wifidriver/mlan_cmdevt.c:1445:13:wlan_cmd_region_power_cfg	32	static
 ../wifi/wifidriver/mlan_cmdevt.c:2032:13:wlan_download_vdll_block	48	static
 ../wifi/wifidriver/mlan_cmdevt.c:2085:20:wlan_get_vdll_image	24	static
-../wifi/wifidriver/mlan_cmdevt.c:2109:13:wlan_process_vdll_event	48	static
+../wifi/wifidriver/mlan_cmdevt.c:2109:13:wlan_process_vdll_event	56	static
 ../wifi/wifidriver/mlan_cmdevt.c:2260:13:wlan_cmd_boot_sleep	32	static
 ../wifi/wifidriver/mlan_cmdevt.c:2287:13:wlan_ret_boot_sleep	32	static
 ../wifi/wifidriver/mlan_cmdevt.c:2308:13:wlan_cmd_hs_wakeup_reason	24	static

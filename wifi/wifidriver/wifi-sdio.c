@@ -245,8 +245,6 @@ static void wifi_sdio_wait_for_cmdresp()
     int ret = wifi_sdio_get_command_resp_sem(SDIO_COMMAND_RESPONSE_WAIT_MS);
     if (ret != WM_SUCCESS)
     {
-
-
         /* assert as command flow cannot work anymore */
         assert(0);
     }

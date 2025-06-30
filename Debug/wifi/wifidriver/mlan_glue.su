@@ -1,10 +1,10 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\incl/wm_utils.h:274:20:dump_hex	24	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\incl\wlcmgr/wlan.h:5118:20:print_mac	40	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_wmm.h:73:22:wlan_request_ralist_lock	16	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_wmm.h:91:22:wlan_release_ralist_lock	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\incl/wm_utils.h:274:20:dump_hex	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\incl\wlcmgr/wlan.h:5118:20:print_mac	40	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_wmm.h:73:22:wlan_request_ralist_lock	16	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_wmm.h:91:22:wlan_release_ralist_lock	16	static
 ../wifi/wifidriver/mlan_glue.c:165:14:wifi_11n_save_request	24	static
 ../wifi/wifidriver/mlan_glue.c:184:6:wrapper_deliver_amsdu_subframe	32	static
-../wifi/wifidriver/mlan_glue.c:191:20:wrapper_moal_recv_packet	24	static
+../wifi/wifidriver/mlan_glue.c:191:20:wrapper_moal_recv_packet	32	static
 ../wifi/wifidriver/mlan_glue.c:232:9:wrapper_moal_memcpy_ext	32	static
 ../wifi/wifidriver/mlan_glue.c:242:20:wrapper_moal_init_timer	40	static
 ../wifi/wifidriver/mlan_glue.c:280:20:wrapper_moal_start_timer	32	static
@@ -32,7 +32,7 @@ D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_w
 ../wifi/wifidriver/mlan_glue.c:942:5:wrapper_wlan_ecsa_enable	32	static
 ../wifi/wifidriver/mlan_glue.c:966:5:wrapper_wlan_cmd_get_hw_spec	16	static
 ../wifi/wifidriver/mlan_glue.c:978:13:wrapper_wlan_cmd_mgmt_ie	1184	static
-../wifi/wifidriver/mlan_glue.c:1012:5:wrapper_wlan_handle_rx_packet	32	static
+../wifi/wifidriver/mlan_glue.c:1012:5:wrapper_wlan_handle_rx_packet	40	static
 ../wifi/wifidriver/mlan_glue.c:1191:6:wrapper_wlan_cmd_11n_cfg	24	static
 ../wifi/wifidriver/mlan_glue.c:1207:6:set_event_chanswann	4	static
 ../wifi/wifidriver/mlan_glue.c:1212:6:clear_event_chanswann	4	static
@@ -65,7 +65,7 @@ D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_w
 ../wifi/wifidriver/mlan_glue.c:2598:13:wifi_set_hostcmd_resp	24	static
 ../wifi/wifidriver/mlan_glue.c:2620:13:load_bss_list	40	static
 ../wifi/wifidriver/mlan_glue.c:2680:13:load_ver_ext	24	static
-../wifi/wifidriver/mlan_glue.c:2696:5:wifi_process_cmd_response	312	static
+../wifi/wifidriver/mlan_glue.c:2696:5:wifi_process_cmd_response	320	static
 ../wifi/wifidriver/mlan_glue.c:4520:7:wlan_get_specific_ie	40	static
 ../wifi/wifidriver/mlan_glue.c:4588:13:wrapper_wlan_check_sta_capability	80	static
 ../wifi/wifidriver/mlan_glue.c:4723:13:wrapper_wlan_check_uap_capability	32	static
@@ -77,7 +77,7 @@ D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_w
 ../wifi/wifidriver/mlan_glue.c:5104:5:wifi_request_bgscan_query	40	static
 ../wifi/wifidriver/mlan_glue.c:5116:5:wifi_config_bgscan_and_rssi	32	static
 ../wifi/wifidriver/mlan_glue.c:5179:13:wifi_stop_bgscan	16	static
-../wifi/wifidriver/mlan_glue.c:5195:5:wifi_handle_fw_event	80	static
+../wifi/wifidriver/mlan_glue.c:5195:5:wifi_handle_fw_event	112	static
 ../wifi/wifidriver/mlan_glue.c:5993:13:process_rsn_ie	80	static
 ../wifi/wifidriver/mlan_glue.c:6193:13:process_wpa_ie	72	static
 ../wifi/wifidriver/mlan_glue.c:6326:5:wrapper_bssdesc_first_set	40	static

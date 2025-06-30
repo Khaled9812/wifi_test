@@ -1,4 +1,4 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_main.h:3097:22:wlan_get_priv	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_main.h:3097:22:wlan_get_priv	24	static
 ../wifi/wifidriver/mlan_11d.c:107:6:region_string_2_region_code	24	static
 ../wifi/wifidriver/mlan_11d.c:142:13:wlan_11d_region_2_code	32	static
 ../wifi/wifidriver/mlan_11d.c:178:16:wlan_11d_country_index_2_string	16	static

@@ -32,8 +32,8 @@
 ../lwip/src/api/sockets.c:1794:1:lwip_writev	56	static
 ../lwip/src/api/sockets.c:1813:1:lwip_link_select_cb	16	static
 ../lwip/src/api/sockets.c:1837:1:lwip_unlink_select_cb	16	static
-../lwip/src/api/sockets.c:1877:1:lwip_selscan	64	static
-../lwip/src/api/sockets.c:2006:1:lwip_select	128	static
+../lwip/src/api/sockets.c:1877:1:lwip_selscan	104	static
+../lwip/src/api/sockets.c:2006:1:lwip_select	136	static
 ../lwip/src/api/sockets.c:2242:1:lwip_pollscan	56	static
 ../lwip/src/api/sockets.c:2368:1:lwip_poll	72	static
 ../lwip/src/api/sockets.c:2487:1:lwip_poll_should_wake	32	static
@@ -45,7 +45,7 @@
 ../lwip/src/api/sockets.c:2802:1:lwip_getsockname	24	static
 ../lwip/src/api/sockets.c:2808:1:lwip_getsockopt	40	static
 ../lwip/src/api/sockets.c:2908:1:lwip_sockopt_to_ipopt	16	static
-../lwip/src/api/sockets.c:2974:1:lwip_getsockopt_impl	40	static
+../lwip/src/api/sockets.c:2974:1:lwip_getsockopt_impl	56	static
 ../lwip/src/api/sockets.c:3306:1:lwip_setsockopt	40	static
 ../lwip/src/api/sockets.c:3404:1:lwip_setsockopt_impl	72	static
 ../lwip/src/api/sockets.c:3850:1:lwip_ioctl	32	static

@@ -1,4 +1,4 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\incl/wm_utils.h:274:20:dump_hex	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\incl/wm_utils.h:274:20:dump_hex	24	static
 ../wifi/wifidriver/mlan_uap_cmdevent.c:36:20:wlan_uap_cmd_ap_config	128	static
 ../wifi/wifidriver/mlan_uap_cmdevent.c:383:20:wlan_uap_cmd_sys_configure	72	static
 ../wifi/wifidriver/mlan_uap_cmdevent.c:567:20:wlan_uap_cmd_snmp_mib	72	static

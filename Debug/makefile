@@ -17,23 +17,20 @@ RM := rm -rf
 -include wifi/wifi_bt_firmware/IW416/subdir.mk
 -include wifi/wifi_bt_firmware/8987/subdir.mk
 -include wifi/wifi_bt_firmware/8801/subdir.mk
--include wifi/template/subdir.mk
 -include wifi/sdio_nxp_abs/subdir.mk
 -include wifi/port/osa/subdir.mk
 -include wifi/port/net/subdir.mk
 -include wifi/fwdnld_intf_abs/subdir.mk
 -include wifi/firmware_dnld/subdir.mk
 -include wifi/dhcpd/subdir.mk
--include video/subdir.mk
 -include utilities/str/subdir.mk
--include utilities/debug_console_lite/subdir.mk
+-include utilities/debug_console/subdir.mk
 -include utilities/subdir.mk
 -include startup/subdir.mk
 -include source/subdir.mk
--include sdmmc/template/usdhc/subdir.mk
 -include sdmmc/sdio/subdir.mk
 -include sdmmc/osa/subdir.mk
--include sdmmc/host/usdhc/blocking/subdir.mk
+-include sdmmc/host/usdhc/non_blocking/subdir.mk
 -include sdmmc/common/subdir.mk
 -include lwip/src/netif/ppp/polarssl/subdir.mk
 -include lwip/src/netif/ppp/subdir.mk
@@ -51,8 +48,7 @@ RM := rm -rf
 -include drivers/subdir.mk
 -include device/subdir.mk
 -include component/uart/subdir.mk
--include component/timer_manager/subdir.mk
--include component/timer/subdir.mk
+-include component/serial_manager/subdir.mk
 -include component/osa/subdir.mk
 -include component/lists/subdir.mk
 -include component/gpio/subdir.mk
@@ -71,7 +67,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := evkbmimxrt1170anananana_csi_mipi_yuv_cm7
+BUILD_ARTIFACT_NAME := evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7
 BUILD_ARTIFACT_EXTENSION := axf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -83,24 +79,24 @@ all:
 	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
 
 # Main-build Target
-main-build: evkbmimxrt1170anananana_csi_mipi_yuv_cm7.axf
+main-build: evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.axf
 
 # Tool invocations
-evkbmimxrt1170anananana_csi_mipi_yuv_cm7.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="evkbmimxrt1170anananana_csi_mipi_yuv_cm7.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -T evkbmimxrt1170anananana_csi_mipi_yuv_cm7_Debug.ld -o "evkbmimxrt1170anananana_csi_mipi_yuv_cm7.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -T evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7_Debug.ld -o "evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) evkbmimxrt1170anananana_csi_mipi_yuv_cm7.axf
+	-$(RM) evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "evkbmimxrt1170anananana_csi_mipi_yuv_cm7.axf"; # arm-none-eabi-objcopy -v -O binary "evkbmimxrt1170anananana_csi_mipi_yuv_cm7.axf" "evkbmimxrt1170anananana_csi_mipi_yuv_cm7.bin" ; # checksum -p MIMXRT1176xxxxx -d "evkbmimxrt1170anananana_csi_mipi_yuv_cm7.bin";
+	-arm-none-eabi-size "evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.axf"; # arm-none-eabi-objcopy -v -O binary "evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.axf" "evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.bin" ; # checksum -p MIMXRT1176xxxxx -d "evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7.bin";
 	-@echo ' '
 
 .PHONY: all clean dependents main-build post-build

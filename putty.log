@@ -1,0 +1,217 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.06.30 10:57:44 =~=~=~=~=~=~=~=~=~=~=~=
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a520
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[w_tmr] Creating timer
+[wifi_io] FWCMD : INIT (0xa9)
+ASSERT ERROR " wifi-sdio.c:251 : 0 
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a520
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[w_tmr] Creating timer
+[wifi_io] FWCMD : INIT (0xa9)
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a520
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[w_tmr] Creating timer
+[wifi_io] FWCMD : INIT (0xa9)
+ASSERT ERROR " wifi-sdio.c:251 : 0 
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a520
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[w_tmr] Creating timer
+[wifi_io] FWCMD : INIT (0xa9)
+ASSERT ERROR " wifi-sdio.c:251 : 0 
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a58c
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[wifi_io] Error: Error in wlan_card_status()
+[wifi_io] Error: Card timeout sdio_interface_send:314
+[wifi] Error: sd_wifi_init failed. status code 4294967295
+
+Inside wpl 13.1
+Inside wpl 13.5[wlcm] Error: wifi_init failed. status code 4294967295
+
+Inside wpl 8[!] WPL_Init: Failed, error: 1
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a58c
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[w_tmr] Creating timer
+[wifi_io] FWCMD : INIT (0xa9)
+[wifi] Error: Timeout waiting for cmd 0xa9
+[wifi] Error: sd_wifi_post_init failed. status code 4294967295
+
+Inside wpl 13.1
+Inside wpl 13.5[wlcm] Error: wifi_init failed. status code 4294967295
+
+Inside wpl 8[!] WPL_Init: Failed, error: 1
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a58c
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[w_tmr] Creating timer
+[wifi_io] FWCMD : INIT (0xa9)
+[wifi] Error: Timeout waiting for cmd 0xa9
+[wifi] Error: sd_wifi_post_init failed. status code 4294967295
+
+Inside wpl 13.1
+Inside wpl 13.5[wlcm] Error: wifi_init failed. status code 4294967295
+
+Inside wpl 8[!] WPL_Init: Failed, error: 1
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a554
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[wifi_io] Error: Error in wlan_card_status()
+[wifi_io] Error: Card timeout sdio_interface_send:314
+[wifi] Error: sd_wifi_init failed. status code 4294967295
+
+Inside wpl 13.1
+Inside wpl 13.5[wlcm] Error: wifi_init failed. status code 4294967295
+
+Inside wpl 8[!] WPL_Init: Failed, error: 1
+
+Starting wifi_setup DEMO
+
+Inside wpl 1
+Inside wpl 2
+Inside wpl 4
+Inside wpl 5
+Inside wpl 7
+Inside wpl 9.5
+Inside wpl 13[w_mem] [mlan]: Alloc: A: 20254E88 S: 1140
+[w_mem] [mlan]: Alloc: A: 20255300 S: 4440
+[w_mem] [mlan]: Alloc: A: 20256458 S: 4440
+[sdio] Card Version - (0x43)
+[sdio] Card initialization successful
+[sdio] Voltage: 1.8V
+[sdio] Timing mode: DDR50
+[wifi_io] Start copying connectivity firmware from 0x3004a554
+[wifi_io] Un-compressed image found, start download, len: 1088384
+[w_tmr] Creating timer
+[wifi_io] FWCMD : INIT (0xa9)
+[wifi] Error: Timeout waiting for cmd 0xa9
+[wifi] Error: sd_wifi_post_init failed. status code 4294967295
+
+Inside wpl 13.1
+Inside wpl 13.5[wlcm] Error: wifi_init failed. status code 4294967295
+
+Inside wpl 8[!] WPL_Init: Failed, error: 1

@@ -3,7 +3,7 @@
 ../lwip/src/core/dns.c:381:1:dns_getserver	16	static
 ../lwip/src/core/dns.c:395:1:dns_tmr	8	static
 ../lwip/src/core/dns.c:618:1:dns_lookup	32	static
-../lwip/src/core/dns.c:670:1:dns_compare_name	48	static
+../lwip/src/core/dns.c:670:1:dns_compare_name	40	static
 ../lwip/src/core/dns.c:727:1:dns_skip_name	24	static
 ../lwip/src/core/dns.c:767:1:dns_send	72	static
 ../lwip/src/core/dns.c:961:1:dns_call_found	24	static

@@ -7406,23 +7406,15 @@ static int wifi_wakeup_card_cb(osa_rw_lock_t *plock, unsigned int wait_time)
 }
 
 int wlan_init(const uint8_t *fw_start_addr, const size_t size)
-{ PRINTF(
-        "\r\n"
-        "Inside wpl 9.5");
+{
     int ret;
 #if (CONFIG_WMM_UAPSD) || (CONFIG_HOST_SLEEP)
     osa_status_t status;
-    PRINTF(
-                   "\r\n"
-                   "Inside wpl 10");
 #endif
 
     if (wlan.status != WLCMGR_INACTIVE)
     {
         return WM_SUCCESS;
-        PRINTF(
-                       "\r\n"
-                       "Inside wpl 11");
     }
 
 #if CONFIG_MEM_POOLS
@@ -7431,9 +7423,6 @@ int wlan_init(const uint8_t *fw_start_addr, const size_t size)
     {
         wlcm_e("Failed to init Memory Pools");
         return ret;
-        PRINTF(
-                       "\r\n"
-                       "Inside wpl 12");
     }
 #endif
 
@@ -7481,24 +7470,14 @@ int wlan_init(const uint8_t *fw_start_addr, const size_t size)
         return ret;
     }
 #endif
-    PRINTF(
-                   "\r\n"
-                   "Inside wpl 13");
+
     ret = wifi_init(fw_start_addr, size);
-    PRINTF(
-                   "\r\n"
-                   "Inside wpl 13.1");
     if (ret != 0)
     {
-        PRINTF(
-                       "\r\n"
-                       "Inside wpl 13.5");
-    	wlcm_e("wifi_init failed. status code %d", ret);
+        wlcm_e("wifi_init failed. status code %d", ret);
         return ret;
     }
-    PRINTF(
-                   "\r\n"
-                   "Inside wpl 14");
+
     wlan.status = WLCMGR_INIT_DONE;
     wifi_mac_addr_t mac_addr;
 

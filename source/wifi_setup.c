@@ -206,7 +206,7 @@ int main(void)
 {
     /* Initialize the hardware */
     BOARD_InitHardware();
-    BOARD_InitPinsM2();
+
     /* Create the main Task */
     if (xTaskCreate(main_task, "main_task", main_task_STACK_DEPTH, NULL, main_task_PRIORITY, &mainTaskHandle) != pdPASS)
     {

@@ -1,4 +1,4 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_main.h:3001:14:wlan_strlen	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_main.h:3001:14:wlan_strlen	24	static
 ../wifi/wifidriver/mlan_api.c:78:5:wifi_send_shutdown_cmd	16	static
 ../wifi/wifidriver/mlan_api.c:93:5:wifi_deauthenticate	24	static
 ../wifi/wifidriver/mlan_api.c:159:5:wifi_get_eeprom_data	40	static

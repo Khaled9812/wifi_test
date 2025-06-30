@@ -1,5 +1,5 @@
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\incl/wm_utils.h:274:20:dump_hex	24	static
-D:\work_nxp\evkbmimxrt1170anananana_csi_mipi_yuv_cm7\wifi\wifidriver\incl/mlan_main.h:3001:14:wlan_strlen	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\incl/wm_utils.h:274:20:dump_hex	24	static
+D:\work_nxp\evkbmimxrt1170bbbbbbbbbbbbbb_wifi_setup_cm7\wifi\wifidriver\incl/mlan_main.h:3001:14:wlan_strlen	24	static
 ../wifi/wifidriver/mlan_11k.c:34:13:wlan_rrm_rssi_to_rcpi	24	static
 ../wifi/wifidriver/mlan_11k.c:59:13:wlan_rrm_put_le64	24	static
 ../wifi/wifidriver/mlan_11k.c:71:13:wlan_rrm_put_le16	16	static

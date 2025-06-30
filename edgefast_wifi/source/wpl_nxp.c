@@ -256,6 +256,15 @@ wpl_ret_t WPL_Init(void)
 
 #ifndef WPL_NO_WLAN_INIT
     if (status == WPLRET_SUCCESS)
+    {
+        if (wlan_fw_bin_len == 0U)
+        {
+            PRINTF("[!] WiFi firmware image missing. Check board configuration.\r\n");
+            status = WPLRET_FAIL;
+        }
+    }
+
+    if (status == WPLRET_SUCCESS)
     {    PRINTF(
             "\r\n"
             "Inside wpl 7");

@@ -34,7 +34,7 @@
 #endif
 
 /** The number of times to try when polling for status bits */
-#define MAX_POLL_TRIES 100U
+#define MAX_POLL_TRIES 400U
 
 #define sdio_io_e(...) wmlog_e("wifi_io", ##__VA_ARGS__)
 #define sdio_io_w(...) wmlog_w("wifi_io", ##__VA_ARGS__)
